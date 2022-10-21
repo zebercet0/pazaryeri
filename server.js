@@ -12,7 +12,7 @@ app.set('view-engine', 'ejs');
 app.use(express.urlencoded({extended: false}));
 
 //mongodb bağlantısı
-const dbURI = 'mongodb+srv://alieren:alieren@node-db.rkxyvry.mongodb.net/?retryWrites=true&w=majority';
+const dbURI;
 mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
 .then((result) => app.listen(3000))
 .catch((err) => console.log(err));
